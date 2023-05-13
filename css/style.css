@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+body {
+  font-family: "Permanent Marker", sans-serif;
+  /* background-color: #a0d8b3; */
+  background-color: #4db45e;
+}
+
+.container {
+  cursor: url("../img/palu.png"), auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(230, 230, 230);
+  text-align: center;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tanah::after {
+  content: "";
+  display: flex;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: -20px;
+}
+
+.meerkat {
+  width: 100%;
+  height: 100%;
+  background: url(../img/meerkat.png) bottom center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 150px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .meerkat {
+  top: 0;
+}
